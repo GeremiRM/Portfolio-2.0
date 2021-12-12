@@ -1,0 +1,278 @@
+{
+  "../components/DisplacementSphere": [
+    {
+      "id": "./components/DisplacementSphere/DisplacementSphere.module.scss",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./components/DisplacementSphere/index.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./components/DisplacementSphere/sphereFragShader.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./components/DisplacementSphere/sphereVertShader.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./components/hooks/useInViewport.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./components/hooks/usePrefersReducedMotion.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./components/hooks/useWindowSize.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./components/utils/style.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./components/utils/three.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./components/utils/transition.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/@babel/runtime/helpers/esm/extends.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/@popmotion/easing/dist/easing.es.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/@popmotion/popcorn/dist/popcorn.es.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/@popmotion/popcorn/node_modules/framesync/dist/framesync.es.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/@popmotion/popcorn/node_modules/style-value-types/dist/style-value-types.es.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/classnames/index.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/dom-helpers/esm/addClass.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/dom-helpers/esm/hasClass.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/dom-helpers/esm/removeClass.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/next/dist/compiled/css-loader/cjs.js?!./node_modules/next/dist/compiled/postcss-loader/cjs.js?!./node_modules/next/dist/compiled/resolve-url-loader/index.js?!./node_modules/next/dist/compiled/sass-loader/cjs.js?!./components/DisplacementSphere/DisplacementSphere.module.scss",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/next/node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/next/node_modules/@babel/runtime/helpers/esm/arrayWithHoles.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/next/node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/next/node_modules/@babel/runtime/helpers/esm/construct.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/next/node_modules/@babel/runtime/helpers/esm/defineProperty.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/next/node_modules/@babel/runtime/helpers/esm/isNativeReflectConstruct.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/next/node_modules/@babel/runtime/helpers/esm/iterableToArray.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/next/node_modules/@babel/runtime/helpers/esm/iterableToArrayLimit.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/next/node_modules/@babel/runtime/helpers/esm/nonIterableRest.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/next/node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/next/node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/next/node_modules/@babel/runtime/helpers/esm/slicedToArray.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/next/node_modules/@babel/runtime/helpers/esm/toConsumableArray.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/next/node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/popmotion/dist/popmotion.es.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/popmotion/node_modules/framesync/dist/framesync.es.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/popmotion/node_modules/style-value-types/dist/style-value-types.es.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/prop-types/checkPropTypes.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/prop-types/factoryWithTypeCheckers.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/prop-types/index.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/prop-types/lib/ReactPropTypesSecret.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/react-dom/cjs/react-dom.development.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/react-dom/index.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/react-is/cjs/react-is.development.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/react-is/index.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/react-transition-group/esm/CSSTransition.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/react-transition-group/esm/ReplaceTransition.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/react-transition-group/esm/SwitchTransition.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/react-transition-group/esm/Transition.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/react-transition-group/esm/TransitionGroup.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/react-transition-group/esm/TransitionGroupContext.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/react-transition-group/esm/config.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/react-transition-group/esm/index.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/react-transition-group/esm/utils/ChildMapping.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/react-transition-group/esm/utils/PropTypes.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/scheduler/cjs/scheduler-tracing.development.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/scheduler/cjs/scheduler.development.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/scheduler/index.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/scheduler/tracing.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/stylefire/dist/stylefire.es.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/stylefire/node_modules/framesync/dist/framesync.es.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/stylefire/node_modules/style-value-types/dist/style-value-types.es.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/three/build/three.module.js",
+      "file": "static/chunks/1.js"
+    }
+  ],
+  "./dev/noop": [
+    {
+      "id": "./node_modules/next/dist/client/dev/noop.js",
+      "file": "static/chunks/0.js"
+    }
+  ]
+}
