@@ -26,12 +26,12 @@ import { value, spring } from "popmotion";
 import vertShader from "./sphereVertShader";
 import fragShader from "./sphereFragShader";
 import { Transition } from "react-transition-group";
-import usePrefersReducedMotion from "../hooks/usePrefersReducedMotion";
-import useInViewport from "../hooks/useInViewport";
-import useWindowSize from "../hooks/useWindowSize";
-import { reflow } from "../utils/transition";
-import { media, rgbToThreeColor } from "../utils/style";
-import { cleanScene, removeLights, cleanRenderer } from "../utils/three";
+import usePrefersReducedMotion from "./hooks/usePrefersReducedMotion";
+import useInViewport from "./hooks/useInViewport";
+import useWindowSize from "./hooks/useWindowSize";
+import { reflow } from "./utils/transition";
+import { media, rgbToThreeColor } from "./utils/style";
+import { cleanScene, removeLights, cleanRenderer } from "./utils/three";
 import "./DisplacementSphere.module.scss";
 
 const DisplacementSphere = (props) => {
@@ -104,7 +104,8 @@ const DisplacementSphere = (props) => {
     const dirLight = new DirectionalLight(colorWhite, 0.6);
     const ambientLight = new AmbientLight(
       colorWhite,
-      themeId === "light" ? 0.8 : 0.1
+      // themeId === "light" ? 0.8 : 0.1
+      0.2
     );
 
     dirLight.position.z = 200;
