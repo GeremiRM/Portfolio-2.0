@@ -1,8 +1,11 @@
 import { Stack, Button, Box, Textarea, FormLabel } from "@chakra-ui/react";
 import { Form, Formik } from "formik";
+import { useState } from "react";
 import { InputField } from "./InputField";
 
 export const ContactForm = ({}) => {
+  const [textAreaInput, setTextAreaInput] = useState("");
+
   const validate = (values) => {
     const errors = {};
 
@@ -35,9 +38,12 @@ export const ContactForm = ({}) => {
             <Box>
               <Box mb="0.5rem">
                 <FormLabel
-                  color="gray.400"
+                  color="#e7537b"
                   htmlFor="message"
                   textTransform="uppercase"
+                  fontFamily="Rajdhani"
+                  fontSize="1.1rem"
+                  letterSpacing="2px"
                 >
                   Message
                 </FormLabel>
@@ -45,17 +51,22 @@ export const ContactForm = ({}) => {
               <Textarea
                 name="message"
                 fontSize="0.9rem"
-                border="none"
                 borderRadius="12px"
                 height="10rem"
                 resize="none"
-                bg="rgba(75,75,75,0.4)"
+                variant="outline"
+                py="1rem"
+                value={textAreaInput}
+                onChange={(e) => setTextAreaInput(e.target.value)}
+                bg={`${textAreaInput !== "" ? "white" : "transparent"}`}
+                color={`${textAreaInput !== "" ? "black" : "white"}`}
                 _placeholder={{
                   color: "#ddd",
                 }}
                 _focus={{
-                  borderBottomColor: "white",
                   outline: "none",
+                  bg: "white",
+                  color: "#333",
                 }}
                 _invalid={{
                   borderBottomColor: "red",
@@ -66,6 +77,7 @@ export const ContactForm = ({}) => {
             <Box
               alignSelf="flex-start"
               pt={{ base: "4rem", sm: "2rem", md: "0" }}
+              w="100%"
             >
               <Button
                 isLoading={isSubmitting}
@@ -73,12 +85,12 @@ export const ContactForm = ({}) => {
                 bg="transparent"
                 border="2px solid #e7537b"
                 transition="0.25s"
-                w="200px"
                 py="1.5rem"
                 textTransform="uppercase"
                 fontSize="1.5rem"
-                fontFamily=""
                 letterSpacing="5px"
+                fontFamily="Rajdhani"
+                w="100%"
                 _hover={{
                   bg: "#e7537b",
                 }}
