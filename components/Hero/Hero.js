@@ -1,5 +1,7 @@
 import dynamic from "next/dynamic";
 
+import Link from "next/link";
+
 import { Box, Heading, Flex, Stack } from "@chakra-ui/react";
 
 import styles from "../../styles/Home.module.scss";
@@ -8,6 +10,7 @@ import { BiCaretDown } from "react-icons/bi";
 import { motion } from "framer-motion";
 
 import Typewriter from "../Typewriter";
+import Title from "../Title";
 
 const DisplacementSphere = dynamic(() => import("../DisplacementSphere"));
 
@@ -49,29 +52,12 @@ export default function Hero() {
           </Heading>
           <Stack spacing="-1rem" pb="10vh">
             <Flex align="center">
-              <Heading
-                fontFamily="Montserrat"
-                fontSize={{
-                  base: "3.5rem",
-                  md: "5rem",
-                  lg: "7rem",
-                  xl: "9rem",
-                }}
-                mr="1.5rem"
-                letterSpacing="2px"
-                textShadow="-4px 3px 2px rgba(50,50,50, 1)"
-              >
+              <Title mr="1.5rem">
                 <Typewriter words={["Software"]} loop={1} speed={80} />
-              </Heading>
+              </Title>
               <Box bg="#e7537a80" flex="1" h="2.5px"></Box>
             </Flex>
-            <Heading
-              color="#e7537b"
-              fontFamily="Montserrat"
-              fontSize={{ base: "3.5rem", md: "5rem", lg: "7rem", xl: "9rem" }}
-              letterSpacing="2px"
-              textShadow="-4px 3px 2px rgba(50,50,50, 1)"
-            >
+            <Title color="#e7537b">
               <Typewriter
                 cursor={true}
                 loop={false}
@@ -79,16 +65,30 @@ export default function Hero() {
 
                 // speed={50}
               />
-            </Heading>
+            </Title>
           </Stack>
         </Stack>
         <MotionBox
+          initial={{ y: "-40px" }}
+          animate={{ y: "0px" }}
+          transition={{
+            repeat: Infinity,
+            type: "tween",
+            repeatType: "reverse",
+            duration: "0.5",
+          }}
           position="absolute"
           bottom="2rem"
           left="calc(50% - 1rem)"
-          fontSize="2rem"
+          fontSize="3rem"
+          cursor="pointer"
+          _hover={{ color: "#e7537b" }}
         >
-          <BiCaretDown />
+          <Link href="#about" passHref>
+            <a>
+              <BiCaretDown />
+            </a>
+          </Link>
         </MotionBox>
       </MotionFlex>
     </Box>

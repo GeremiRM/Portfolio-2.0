@@ -4,6 +4,7 @@ import { motion, useAnimation } from "framer-motion";
 // import { useInView } from "react-intersection-observer";
 import { ContactForm } from "./ContactForm";
 import Container from "../Container";
+import Subtitle from "../Subtitle";
 
 export const Contact = ({}) => {
   const MotionFlex = motion(Flex);
@@ -43,9 +44,7 @@ export const Contact = ({}) => {
           // animate={controls}
           // variants={card}
         >
-          <Heading fontFamily="Montserrat" fontSize="2.5rem" mb="2rem">
-            Contact
-          </Heading>
+          <Subtitle mb="2rem">Contact</Subtitle>
           <ContactForm />
         </MotionFlex>
       </Container>

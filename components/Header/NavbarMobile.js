@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import Link from "next/link";
 
 import {
   Box,
@@ -31,7 +32,7 @@ const NavbarMobile = () => {
         icon={<GiHamburgerMenu />}
         onClick={onOpen}
         fontSize="1.75rem"
-        bg="transparent"
+        bg="#e7537a36"
       />
       <Drawer
         finalFocusRef={btnRef}
@@ -47,8 +48,17 @@ const NavbarMobile = () => {
           background="transparent"
           p="2rem 1rem"
         >
-          <DrawerCloseButton fontSize="1.25rem" mt="2rem" mr="1.5rem" />
-          <DrawerHeader fontFamily="Rajdhani" textTransform="uppercase">
+          <DrawerCloseButton
+            fontSize="1.25rem"
+            mt="2rem"
+            mr="1.5rem"
+            color="white"
+          />
+          <DrawerHeader
+            fontFamily="Rajdhani"
+            textTransform="uppercase"
+            color="white"
+          >
             Geremi Ramos
           </DrawerHeader>
 
@@ -63,9 +73,33 @@ const NavbarMobile = () => {
               letterSpacing="3px"
               spacing="1.5rem"
             >
-              <Text>About Me</Text>
-              <Text>Projects</Text>
-              <Text>Contact</Text>
+              <Link href="#about">
+                <Text
+                  cursor="pointer"
+                  transition="0.25s all ease"
+                  _hover={{ color: "#e7537b" }}
+                >
+                  About Me
+                </Text>
+              </Link>
+              <Link href="#projects">
+                <Text
+                  cursor="pointer"
+                  transition="0.25s all ease"
+                  _hover={{ color: "#e7537b" }}
+                >
+                  Projects
+                </Text>
+              </Link>
+              <Link href="#contact">
+                <Text
+                  cursor="pointer"
+                  transition="0.25s all ease"
+                  _hover={{ color: "#e7537b" }}
+                >
+                  Contact
+                </Text>
+              </Link>
             </Stack>
           </DrawerBody>
 
@@ -74,7 +108,7 @@ const NavbarMobile = () => {
             display="flex"
             justifyContent="space-between"
           >
-            <HStack>
+            <HStack color="white">
               <IconButton
                 aria-label="Link to Geremi's Github"
                 bg="transparent"

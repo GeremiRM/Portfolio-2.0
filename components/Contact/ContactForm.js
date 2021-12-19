@@ -38,7 +38,6 @@ export const ContactForm = ({}) => {
             <Box>
               <Box mb="0.5rem">
                 <FormLabel
-                  color="#e7537b"
                   htmlFor="message"
                   textTransform="uppercase"
                   fontFamily="Rajdhani"

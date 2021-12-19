@@ -1,5 +1,8 @@
-import { Box, Heading, Text, Flex } from "@chakra-ui/react";
+import { Box, Text, Flex } from "@chakra-ui/react";
 import Container from "../Container";
+
+import Typewriter from "../Typewriter";
+import Subtitle from "../Subtitle";
 
 const About = () => {
   return (
@@ -12,9 +15,11 @@ const About = () => {
         color="rgba(255, 255, 255, 0.75)"
       >
         <Box mb="2rem">
-          <Heading mb="2rem" fontFamily="Montserrat" color="white">
-            Hi there
-          </Heading>
+          <Subtitle mb="2rem">
+            <Typewriter loop={1} speed={50} words={["Hi there"]} cursor="|">
+              Hi there
+            </Typewriter>
+          </Subtitle>
 
           <Box lineHeight="160%">
             <Text mb="2rem">
@@ -31,6 +36,8 @@ const About = () => {
             </Text>
           </Box>
         </Box>
+
+        {/* Image */}
         <Box h="600px" w="100%" bg="rgba(150, 150, 150, 0.25)"></Box>
       </Flex>
     </Container>

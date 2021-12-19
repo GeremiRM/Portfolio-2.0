@@ -8,6 +8,7 @@ const breakpoints = createBreakpoints({
   md: "52em",
   lg: "64em",
   xl: "80em",
+  xxl: "96em",
 });
 
 const config = {
@@ -18,12 +19,12 @@ const config = {
 const theme = extendTheme({
   colors: {
     black: "#16161D",
+    primary: "#e7537b",
   },
-
   config,
-
   fonts,
   breakpoints,
+
   icons: {
     logo: {
       path: (

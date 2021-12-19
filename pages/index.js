@@ -7,6 +7,7 @@ import Hero from "../components/Hero/Hero";
 import Socials from "../components/Socials/Socials";
 import About from "../components/About/About";
 import { Contact } from "../components/Contact/Contact";
+import Projects from "../components/Projects/Projects";
 
 const DisplacementSphere = dynamic(() =>
   import("../components/DisplacementSphere")
@@ -14,16 +15,29 @@ const DisplacementSphere = dynamic(() =>
 
 export default function Home() {
   return (
-    <Box bg="rgb(25,25,25)" pb="4rem">
+    <Box
+      bg="linear-gradient(353deg, rgba(231,83,123,0.15) 10%, rgba(25,25,25,1) 60%);"
+      pb="4rem"
+      color="white"
+    >
       <Header />
-      <Box mb="20vh">
+      <Box id="home">
         <Hero />
       </Box>
+
+      <Box pt="20vh" id="about">
+        <About />
+      </Box>
+      <Box pt="10rem" id="projects">
+        <Projects />
+      </Box>
+      <Box id="contact" pt="10rem">
+        <Contact />
+      </Box>
+
       <Box display={{ base: "none", md: "block" }}>
         <Socials />
       </Box>
-      <About />
-      <Contact />
     </Box>
   );
 }

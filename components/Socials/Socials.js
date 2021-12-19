@@ -15,12 +15,18 @@ const Socials = () => {
         bg="transparent"
         fontSize="1.75rem"
         icon={<FaGithub />}
+        _hover={{
+          color: "#e7537b",
+        }}
       />
       <IconButton
         aria-label="Link to Geremi's LinkedIn"
         bg="transparent"
         fontSize="1.75rem"
         icon={<FaLinkedin />}
+        _hover={{
+          color: "#e7537b",
+        }}
       />
       <Box h="100px" w="2px" bg="#e7537a80"></Box>
     </Stack>

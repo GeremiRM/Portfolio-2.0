@@ -14,7 +14,6 @@ export const InputField = ({ size: _, label, ...props }) => {
   return (
     <FormControl isInvalid={!!error}>
       <FormLabel
-        color="#e7537b"
         htmlFor={field.name}
         fontFamily="Rajdhani"
         fontSize="1.1rem"

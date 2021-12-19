@@ -8,18 +8,19 @@ const Header = () => {
       as="header"
       position="fixed"
       zIndex="1000"
-      p={{ base: "1rem 2rem", md: "3rem", lg: "3rem 5rem" }}
+      p={{ base: "1rem 2rem", md: "1.5rem 3rem", lg: "1.5rem 5rem" }}
       justify="space-between"
       w="100%"
       align="center"
+      // bg="#e7537b20"
     >
       <Text>R</Text>
       <Box display={{ md: "none" }}>
         <NavbarMobile />
       </Box>
-      <Box display={{ base: "none", md: "block" }}>
+      {/* <Box display={{ base: "none", md: "block" }}>
         <NavbarDesktop />
-      </Box>
+      </Box> */}
     </Flex>
   );
 };
