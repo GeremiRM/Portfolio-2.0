@@ -16,7 +16,7 @@ const DisplacementSphere = dynamic(() =>
 export default function Home() {
   return (
     <Box
-      bg="linear-gradient(353deg, rgba(231,83,123,0.15) 10%, rgba(25,25,25,1) 60%);"
+      bg="linear-gradient(353deg, rgba(231,83,123,0.15) 0%, rgba(25,25,25,1) 0%);"
       pb="4rem"
       color="white"
     >

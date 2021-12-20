@@ -2,10 +2,11 @@ import { useState } from "react";
 import { Box, useDisclosure } from "@chakra-ui/react";
 import Container from "../Container";
 import Subtitle from "../Subtitle";
-import { Mobile } from "./Mobile/Mobile";
-import { Desktop } from "./Desktop/Desktop";
+import { Slide } from "./Carousel/Slide";
+import { ProjectModal } from "./ProjectModal/ProjectModal";
 import { useGithubData } from "../hooks/useGithubData";
-import { ProjectModal } from "./ProjectModal";
+import { Carousel } from "./Carousel/Carousel";
+// import { test as Test } from "./ProjectModal/test";
 
 const Projects = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -18,24 +19,33 @@ const Projects = () => {
     onOpen();
   };
 
+  const renderProjects = () => {
+    return projects.map((project, idx) => (
+      <Project
+        title={project.name}
+        desc={project.description}
+        languages={projectsLangs[idx]}
+        stars={project.stargazers_count}
+        key={idx}
+        id={idx}
+        updateTime={project.pushed_at}
+        handleClick={handleSlideClick}
+      />
+    ));
+  };
+
   return (
     <Box>
       <Container>
         <Subtitle>Projects</Subtitle>
-        <Box display={{ base: "none", lg: "block" }}>
-          <Desktop
-            projects={projects}
-            projectsLangs={projectsLangs}
-            handleClick={handleSlideClick}
-          />
-        </Box>
-
-        <Box display={{ base: "block", lg: "none" }} mt="2rem">
-          <Mobile handleClick={handleSlideClick} projects={projects} />
-        </Box>
+        <Carousel gap={32}>{renderProjects()}</Carousel>
       </Container>
-
-      <ProjectModal id={currentModal} isOpen={isOpen} onClose={onClose} />
+      <ProjectModal
+        id={currentModal}
+        isOpen={isOpen}
+        onClose={onClose}
+        project={projects[currentModal]}
+      />
     </Box>
   );
 };

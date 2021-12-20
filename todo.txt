@@ -1,0 +1,3 @@
+1) Add in the carousel all of the images of all the projects, 
+to get the names of the projects, use the config in the project folder.
+Use that to import all of the images and put the first one, in the slide.

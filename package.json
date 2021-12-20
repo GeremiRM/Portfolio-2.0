@@ -27,5 +27,10 @@
     "sass": "^1.32.5",
     "sitemap": "^6.4.0",
     "three": "^0.125.2"
+  },
+  "devDependencies": {
+    "file-loader": "^6.2.0",
+    "image-webpack-loader": "^8.0.1",
+    "url-loader": "^4.1.1"
   }
 }
