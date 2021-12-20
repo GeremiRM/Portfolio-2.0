@@ -1,4 +1,4 @@
-import { Stack, IconButton, Box } from "@chakra-ui/react";
+import { Stack, IconButton, Box, Link } from "@chakra-ui/react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Socials = () => {
@@ -10,24 +10,31 @@ const Socials = () => {
       align="center"
       justify="center"
     >
-      <IconButton
-        aria-label="Link to Geremi's Github"
-        bg="transparent"
-        fontSize="1.75rem"
-        icon={<FaGithub />}
-        _hover={{
-          color: "#e7537b",
-        }}
-      />
-      <IconButton
-        aria-label="Link to Geremi's LinkedIn"
-        bg="transparent"
-        fontSize="1.75rem"
-        icon={<FaLinkedin />}
-        _hover={{
-          color: "#e7537b",
-        }}
-      />
+      <Link href="https://github.com/GeremiRM/" target="_blank">
+        <IconButton
+          aria-label="Link to Geremi's Github"
+          bg="transparent"
+          fontSize="1.75rem"
+          icon={<FaGithub />}
+          _hover={{
+            color: "#e7537b",
+          }}
+        />
+      </Link>
+      <Link
+        href="https://www.linkedin.com/in/geremi-ramos-a2a0b8226/"
+        target="_blank"
+      >
+        <IconButton
+          aria-label="Link to Geremi's LinkedIn"
+          bg="transparent"
+          fontSize="1.75rem"
+          icon={<FaLinkedin />}
+          _hover={{
+            color: "#e7537b",
+          }}
+        />
+      </Link>
       <Box h="100px" w="2px" bg="#e7537a80"></Box>
     </Stack>
   );

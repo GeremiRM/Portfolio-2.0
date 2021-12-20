@@ -81,6 +81,10 @@
       "file": "static/chunks/1.js"
     },
     {
+      "id": "./node_modules/next/node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js",
+      "file": "static/chunks/1.js"
+    },
+    {
       "id": "./node_modules/next/node_modules/@babel/runtime/helpers/esm/construct.js",
       "file": "static/chunks/1.js"
     },
@@ -89,7 +93,19 @@
       "file": "static/chunks/1.js"
     },
     {
+      "id": "./node_modules/next/node_modules/@babel/runtime/helpers/esm/iterableToArray.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/next/node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js",
+      "file": "static/chunks/1.js"
+    },
+    {
       "id": "./node_modules/next/node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/next/node_modules/@babel/runtime/helpers/esm/toConsumableArray.js",
       "file": "static/chunks/1.js"
     },
     {
@@ -243,6 +259,10 @@
       "file": "static/chunks/1.js"
     },
     {
+      "id": "./node_modules/next/node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js",
+      "file": "static/chunks/1.js"
+    },
+    {
       "id": "./node_modules/next/node_modules/@babel/runtime/helpers/esm/construct.js",
       "file": "static/chunks/1.js"
     },
@@ -251,7 +271,19 @@
       "file": "static/chunks/1.js"
     },
     {
+      "id": "./node_modules/next/node_modules/@babel/runtime/helpers/esm/iterableToArray.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/next/node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js",
+      "file": "static/chunks/1.js"
+    },
+    {
       "id": "./node_modules/next/node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js",
+      "file": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/next/node_modules/@babel/runtime/helpers/esm/toConsumableArray.js",
       "file": "static/chunks/1.js"
     },
     {

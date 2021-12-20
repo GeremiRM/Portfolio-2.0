@@ -19,9 +19,11 @@ const Projects = () => {
     onOpen();
   };
 
+  console.log(projects);
+
   const renderProjects = () => {
     return projects.map((project, idx) => (
-      <Project
+      <Slide
         title={project.name}
         desc={project.description}
         languages={projectsLangs[idx]}
@@ -30,6 +32,7 @@ const Projects = () => {
         id={idx}
         updateTime={project.pushed_at}
         handleClick={handleSlideClick}
+        repoUrl={project.html_url}
       />
     ));
   };

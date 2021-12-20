@@ -7,6 +7,8 @@ import Hero from "../components/Hero/Hero";
 import Socials from "../components/Socials/Socials";
 import About from "../components/About/About";
 import { Contact } from "../components/Contact/Contact";
+import { Skills } from "../components/Skills/Skills";
+
 import Projects from "../components/Projects/Projects";
 
 const DisplacementSphere = dynamic(() =>
@@ -27,6 +29,9 @@ export default function Home() {
 
       <Box pt="20vh" id="about">
         <About />
+      </Box>
+      <Box pt="5rem">
+        <Skills />
       </Box>
       <Box pt="10rem" id="projects">
         <Projects />

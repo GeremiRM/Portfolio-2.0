@@ -1,4 +1,4 @@
-import { Box, Text, Flex } from "@chakra-ui/react";
+import { Box, Text, Flex, HStack, Divider } from "@chakra-ui/react";
 import Container from "../Container";
 
 import Typewriter from "../Typewriter";
@@ -38,7 +38,7 @@ const About = () => {
         </Box>
 
         {/* Image */}
-        <Box h="600px" w="100%" bg="rgba(150, 150, 150, 0.25)"></Box>
+        <Box h="600px" bg="rgba(150, 150, 150, 0.25)" w="100%"></Box>
       </Flex>
     </Container>
   );

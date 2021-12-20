@@ -6,8 +6,11 @@ import {
   Button,
   Divider,
   Flex,
+  Link,
 } from "@chakra-ui/react";
 import { BsGithub } from "react-icons/bs";
+import { AiOutlineExport } from "react-icons/ai";
+
 import { getUpdateTime } from "../../utils/getUpdateTime";
 
 export const Slide = ({
@@ -18,6 +21,7 @@ export const Slide = ({
   updateTime,
   handleClick,
   id,
+  repoUrl,
 }) => {
   const getTotalLangsCount = () => {
     let total = 0;
@@ -67,22 +71,25 @@ export const Slide = ({
         <HStack zIndex="1000" position="relative">
           <Button
             fontWeight="400"
-            leftIcon={<BsGithub />}
+            leftIcon={<AiOutlineExport />}
             variant="outline"
             onClick={(e) => e.stopPropagation()}
             _hover={{ bg: "#e7537a80" }}
           >
-            Clone Project
+            Live site
           </Button>
-          <Button
-            fontWeight="400"
-            leftIcon={<BsGithub />}
-            variant="outline"
-            onClick={(e) => e.stopPropagation()}
-            _hover={{ bg: "#e7537a80" }}
-          >
-            Repo
-          </Button>
+
+          <Link href={repoUrl} target="_blank">
+            <Button
+              fontWeight="400"
+              leftIcon={<BsGithub />}
+              variant="outline"
+              onClick={(e) => e.stopPropagation()}
+              _hover={{ bg: "#e7537a80" }}
+            >
+              Repo
+            </Button>
+          </Link>
         </HStack>
         <Divider color="white" />
       </Stack>
@@ -101,7 +108,6 @@ export const Slide = ({
         </Text>
       </Flex>
       <Button
-        mt="1rem"
         fontWeight="400"
         variant="outline"
         onClick={(e) => {

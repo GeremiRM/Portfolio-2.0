@@ -14,6 +14,7 @@ import {
   HStack,
   IconButton,
   Stack,
+  Link as ChakraLink,
   Text,
   useDisclosure,
 } from "@chakra-ui/react";
@@ -109,18 +110,25 @@ const NavbarMobile = () => {
             justifyContent="space-between"
           >
             <HStack color="white">
-              <IconButton
-                aria-label="Link to Geremi's Github"
-                bg="transparent"
-                fontSize="1.75rem"
-                icon={<FaGithub />}
-              />
-              <IconButton
-                aria-label="Link to Geremi's LinkedIn"
-                bg="transparent"
-                fontSize="1.75rem"
-                icon={<FaLinkedin />}
-              />
+              <ChakraLink href="https://github.com/GeremiRM/" target="_blank">
+                <IconButton
+                  aria-label="Link to Geremi's Github"
+                  bg="transparent"
+                  fontSize="1.75rem"
+                  icon={<FaGithub />}
+                />
+              </ChakraLink>
+              <ChakraLink
+                href="https://www.linkedin.com/in/geremi-ramos-a2a0b8226/"
+                target="_blank"
+              >
+                <IconButton
+                  aria-label="Link to Geremi's LinkedIn"
+                  bg="transparent"
+                  fontSize="1.75rem"
+                  icon={<FaLinkedin />}
+                />
+              </ChakraLink>
             </HStack>
             <Box>
               <Button>Resume</Button>
