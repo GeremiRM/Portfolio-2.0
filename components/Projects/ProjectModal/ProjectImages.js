@@ -43,9 +43,22 @@ export const ProjectImages = ({ project, slides }) => {
   if (!slides) return <></>;
 
   return (
-    <Flex w="full" alignItems="center" justifyContent="center" mx="auto">
+    <Flex
+      w="full"
+      alignItems="center"
+      justifyContent="center"
+      mx="auto"
+      bg="rgba(50,50,50,0.25)"
+      backdropFilter="blur(10px)"
+      rounded={5}
+    >
       <Flex w="full" pos="relative" overflow="hidden">
-        <Flex maxH="60vh" w="full" {...carouselStyle} align="center">
+        <Flex
+          maxH={{ base: "40vh", md: "50vh", xl: "60vh" }}
+          w="full"
+          {...carouselStyle}
+          align="center"
+        >
           {slides.map((slide, sid) => (
             <Image
               src={slide}

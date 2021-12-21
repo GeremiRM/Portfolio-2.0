@@ -19,8 +19,6 @@ const Projects = () => {
     onOpen();
   };
 
-  console.log(projects);
-
   const renderProjects = () => {
     return projects.map((project, idx) => (
       <Slide

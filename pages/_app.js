@@ -1,12 +1,18 @@
+import Head from "next/head";
 import { ChakraProvider } from "@chakra-ui/react";
 
 import "../styles/globals.scss";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ChakraProvider>
-      <Component {...pageProps} />
-    </ChakraProvider>
+    <>
+      <Head>
+        <title>Geremi Ramos | Software Developer</title>
+      </Head>
+      <ChakraProvider>
+        <Component {...pageProps} />
+      </ChakraProvider>
+    </>
   );
 }
 

@@ -78,6 +78,7 @@ const NavbarMobile = () => {
                 <Text
                   cursor="pointer"
                   transition="0.25s all ease"
+                  onClick={onClose}
                   _hover={{ color: "#e7537b" }}
                 >
                   About Me
@@ -87,6 +88,7 @@ const NavbarMobile = () => {
                 <Text
                   cursor="pointer"
                   transition="0.25s all ease"
+                  onClick={onClose}
                   _hover={{ color: "#e7537b" }}
                 >
                   Projects
@@ -96,6 +98,7 @@ const NavbarMobile = () => {
                 <Text
                   cursor="pointer"
                   transition="0.25s all ease"
+                  onClick={onClose}
                   _hover={{ color: "#e7537b" }}
                 >
                   Contact

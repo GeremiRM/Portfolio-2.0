@@ -1,15 +1,15 @@
 import {
   FormControl,
+  Textarea,
   Input,
   InputGroup,
   FormLabel,
   FormErrorMessage,
 } from "@chakra-ui/react";
-
 import { useField } from "formik";
 
-export const InputField = ({ size: _, label, ...props }) => {
-  const [field, { error }] = useField(props);
+export const TextArea = () => {
+  const [field, { error }] = useField({ name: "message", as: "textarea" });
 
   return (
     <FormControl isInvalid={!!error}>
@@ -20,16 +20,15 @@ export const InputField = ({ size: _, label, ...props }) => {
         letterSpacing="2px"
         textTransform="uppercase"
       >
-        {label}
+        Message
       </FormLabel>
 
       <InputGroup>
-        <Input
+        <Textarea
           {...field}
-          {...props}
           id={field.name}
-          fontSize="0.9rem"
           isRequired
+          fontSize="0.9rem"
           px="0.75rem"
           py="1.75rem"
           bg={`${field.value !== "" ? "white" : "transparent"}`}

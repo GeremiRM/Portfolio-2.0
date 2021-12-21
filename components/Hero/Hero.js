@@ -55,7 +55,9 @@ export default function Hero() {
               <Title mr="1.5rem">
                 <Typewriter words={["Software"]} loop={1} speed={80} />
               </Title>
-              <Box bg="#e7537a80" flex="1" h="2.5px"></Box>
+
+              {/* Separator */}
+              <Box bg="#e7537a80" flex="1" h="2.5px" maxW="400px"></Box>
             </Flex>
             <Title color="#e7537b">
               <Typewriter

@@ -38,6 +38,7 @@ export const PROJECTS_DATA = {
       `${IMAGES_DIR}/Countries-Api/3.png`,
       `${IMAGES_DIR}/Countries-Api/4.png`,
     ],
+    url: "https://countries-api-taupe-one.vercel.app/",
     videos: ["video.mp4"],
     stack: ["typescript", "nextjs", "chakraui"],
   },

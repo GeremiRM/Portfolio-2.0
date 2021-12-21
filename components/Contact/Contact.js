@@ -38,14 +38,21 @@ export const Contact = ({}) => {
     <Box pt="5rem">
       <Container>
         <MotionFlex
-          direction="column"
+          direction={{ base: "column", xl: "row" }}
+          align="center"
           color="#eee"
           initial="hidden"
           // animate={controls}
           // variants={card}
         >
-          <Subtitle mb="2rem">Contact</Subtitle>
-          <ContactForm />
+          <Subtitle mb="2rem">
+            <Text fontSize={{ xl: "8rem" }} mr={{ xl: "6rem" }}>
+              Contact
+            </Text>
+          </Subtitle>
+          <Box w="100%" flex={{ xl: "1" }}>
+            <ContactForm />
+          </Box>
         </MotionFlex>
       </Container>
     </Box>

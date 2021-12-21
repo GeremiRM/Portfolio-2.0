@@ -1,10 +1,12 @@
-import { Stack, Button, Box, Textarea, FormLabel } from "@chakra-ui/react";
+import { Stack, Button, Box, useToast } from "@chakra-ui/react";
 import { Form, Formik } from "formik";
-import { useState } from "react";
+
 import { InputField } from "./InputField";
+import { TextArea } from "./Textarea";
+import { send } from "emailjs-com";
 
 export const ContactForm = ({}) => {
-  const [textAreaInput, setTextAreaInput] = useState("");
+  const toast = useToast();
 
   const validate = (values) => {
     const errors = {};
@@ -21,9 +23,50 @@ export const ContactForm = ({}) => {
 
   return (
     <Formik
-      initialValues={{ name: "", email: "", phone: "", message: "" }}
+      initialValues={{ from_name: "", from_email: "", message: "" }}
       onSubmit={async (values, actions) => {
         actions.setErrors(validate(values));
+
+        // If any field is empty, do nothing
+        if (!from_name.value || !from_email.value || !message.value) return "";
+
+        // Else, send the email
+        send(
+          process.env.NEXT_PUBLIC_SERVICE_ID,
+          process.env.NEXT_PUBLIC_TEMPLATE_ID,
+          {
+            from_name: from_name.value,
+            to_name: "Geremi Ramos",
+            from_email: from_email.value,
+            message: message.value,
+          },
+          process.env.NEXT_PUBLIC_USER_ID
+        )
+          .then((response) => {
+            console.log("SUCCESS!", response.status, response.text);
+
+            // Success Message
+            toast({
+              title: "Success!",
+              description: "Email sent successfully",
+              status: "success",
+              duration: 4000,
+              isClosable: true,
+            });
+          })
+          .catch((err) => {
+            console.log("FAILED...", err);
+
+            // Error Message
+            toast({
+              title: "Error!",
+              description:
+                "An error occurred while sendind the email, try again",
+              status: "error",
+              duration: 4000,
+              isClosable: true,
+            });
+          });
         actions.setSubmitting(false);
       }}
       validateOnChange={true}
@@ -31,47 +74,11 @@ export const ContactForm = ({}) => {
       {({ isSubmitting }) => (
         <Form>
           <Stack spacing="4rem">
-            <InputField name="name" label="Name" />
+            <InputField name="from_name" label="Name" />
 
-            <InputField name="email" label="Email" type="email" />
+            <InputField name="from_email" label="Email" type="email" />
 
-            <Box>
-              <Box mb="0.5rem">
-                <FormLabel
-                  htmlFor="message"
-                  textTransform="uppercase"
-                  fontFamily="Rajdhani"
-                  fontSize="1.1rem"
-                  letterSpacing="2px"
-                >
-                  Message
-                </FormLabel>
-              </Box>
-              <Textarea
-                name="message"
-                fontSize="0.9rem"
-                borderRadius="12px"
-                height="10rem"
-                resize="none"
-                variant="outline"
-                py="1rem"
-                value={textAreaInput}
-                onChange={(e) => setTextAreaInput(e.target.value)}
-                bg={`${textAreaInput !== "" ? "white" : "transparent"}`}
-                color={`${textAreaInput !== "" ? "black" : "white"}`}
-                _placeholder={{
-                  color: "#ddd",
-                }}
-                _focus={{
-                  outline: "none",
-                  bg: "white",
-                  color: "#333",
-                }}
-                _invalid={{
-                  borderBottomColor: "red",
-                }}
-              />
-            </Box>
+            <TextArea />
 
             <Box
               alignSelf="flex-start"

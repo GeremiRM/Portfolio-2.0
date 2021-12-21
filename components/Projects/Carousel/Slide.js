@@ -12,6 +12,7 @@ import { BsGithub } from "react-icons/bs";
 import { AiOutlineExport } from "react-icons/ai";
 
 import { getUpdateTime } from "../../utils/getUpdateTime";
+import { PROJECTS_DATA } from "../config";
 
 export const Slide = ({
   title,
@@ -23,6 +24,8 @@ export const Slide = ({
   id,
   repoUrl,
 }) => {
+  const liveSite = PROJECTS_DATA[title].url;
+
   const getTotalLangsCount = () => {
     let total = 0;
     for (let lang in languages) total += languages[lang];
@@ -69,15 +72,17 @@ export const Slide = ({
         </Text>
         <Text>{desc ?? "No description"}</Text>
         <HStack zIndex="1000" position="relative">
-          <Button
-            fontWeight="400"
-            leftIcon={<AiOutlineExport />}
-            variant="outline"
-            onClick={(e) => e.stopPropagation()}
-            _hover={{ bg: "#e7537a80" }}
-          >
-            Live site
-          </Button>
+          <Link href={liveSite} target="_blank">
+            <Button
+              fontWeight="400"
+              leftIcon={<AiOutlineExport />}
+              variant="outline"
+              onClick={(e) => e.stopPropagation()}
+              _hover={{ bg: "#e7537a80" }}
+            >
+              See Live
+            </Button>
+          </Link>
 
           <Link href={repoUrl} target="_blank">
             <Button

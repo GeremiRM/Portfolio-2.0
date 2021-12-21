@@ -1,14 +1,13 @@
 import {
   Box,
+  Flex,
   Modal,
   ModalBody,
   ModalOverlay,
   ModalContent,
-  Button,
   ModalFooter,
   ModalHeader,
   ModalCloseButton,
-  Flex,
   Text,
   Tooltip,
 } from "@chakra-ui/react";
@@ -31,8 +30,8 @@ export const ProjectModal = ({ id, isOpen, onClose, project }) => {
   if (!data || !images) return <></>;
 
   const renderTechIcons = () => {
-    return data.stack.map((tech) => (
-      <Tooltip label={tech.toUpperCase()}>
+    return data.stack.map((tech, idx) => (
+      <Tooltip key={idx} label={tech.toUpperCase()}>
         <Text mx="0.5rem">{techIcons[tech]}</Text>
       </Tooltip>
     ));
@@ -40,24 +39,40 @@ export const ProjectModal = ({ id, isOpen, onClose, project }) => {
 
   return (
     <>
-      <Modal isOpen={isOpen} onClose={onClose}>
+      <Modal
+        isOpen={isOpen}
+        onClose={onClose}
+        motionPreset="slideInBottom"
+        size="full"
+      >
         <ModalOverlay />
         <ModalContent
-          bg="rgba(25,25,25,0.75)"
-          backdropFilter="blur(20px)"
+          bg="rgba(50,50,50,0.25)"
+          backdropFilter="blur(10px)"
           color="white"
+          py="2rem"
+          maxW={{ md: "80vw", lg: "70rem" }}
+          maxH="100vh"
         >
           <ModalHeader
-            fontSize="1.75rem"
+            fontSize="clamp(2.25rem, 3vw, 3.5rem)"
             textTransform="uppercase"
             textAlign="center"
+            fontFamily="Montserrat"
+            fontWeight="800"
           >
             {data.title}
           </ModalHeader>
           <ModalCloseButton />
           <ModalBody>
             <ProjectImages project={data.title} slides={images} />
-            <Box mt="2rem">
+            <Box
+              mt="2rem"
+              w={{ base: "100%", md: "80%" }}
+              textAlign="center"
+              mx="auto"
+              maxW="1200px"
+            >
               <Text lineHeight="1.75rem">{data.desc}</Text>
             </Box>
           </ModalBody>
