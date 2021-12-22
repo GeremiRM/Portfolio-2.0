@@ -52,7 +52,6 @@ export const ProjectModal = ({ id, isOpen, onClose, project }) => {
           color="white"
           py="2rem"
           maxW={{ md: "80vw", lg: "70rem" }}
-          maxH="100vh"
         >
           <ModalHeader
             fontSize="clamp(2.25rem, 3vw, 3.5rem)"

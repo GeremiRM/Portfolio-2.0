@@ -1,5 +1,7 @@
 import dynamic from "next/dynamic";
 
+import { useEffect } from "react";
+
 import Link from "next/link";
 
 import { Box, Heading, Flex, Stack } from "@chakra-ui/react";
@@ -7,19 +9,24 @@ import { Box, Heading, Flex, Stack } from "@chakra-ui/react";
 import styles from "../../styles/Home.module.scss";
 import { BiCaretDown } from "react-icons/bi";
 
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 import Typewriter from "../Typewriter";
 import Title from "../Title";
 
-const DisplacementSphere = dynamic(() => import("../DisplacementSphere"));
+const DisplacementSphere = dynamic(() => import("./DisplacementSphere"));
 
 export default function Hero() {
   const MotionBox = motion(Box);
   const MotionFlex = motion(Flex);
 
   return (
-    <Box position="relative">
+    <Box
+      position="relative"
+      maxW={{ base: "500px", sm: "none", lg: "1000px", xl: "1400px" }}
+      mx="auto"
+    >
       <MotionBox>
         {/* Background Sphere */}
         <DisplacementSphere

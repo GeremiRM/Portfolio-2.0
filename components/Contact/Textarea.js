@@ -1,11 +1,14 @@
 import {
   FormControl,
   Textarea,
-  Input,
+  Box,
   InputGroup,
   FormLabel,
   FormErrorMessage,
 } from "@chakra-ui/react";
+
+import { AiFillWarning } from "react-icons/ai";
+
 import { useField } from "formik";
 
 export const TextArea = () => {
@@ -23,14 +26,14 @@ export const TextArea = () => {
         Message
       </FormLabel>
 
-      <InputGroup>
+      <InputGroup flexDirection="column">
         <Textarea
           {...field}
           id={field.name}
-          isRequired
+          borderColor="#e7537b"
           fontSize="0.9rem"
-          px="0.75rem"
-          py="1.75rem"
+          h={{ base: "125px", lg: "200px", xl: "250px" }}
+          p="1.25rem 0.75rem"
           bg={`${field.value !== "" ? "white" : "transparent"}`}
           color={`${field.value !== "" ? "#333" : "white"}`}
           _focus={{
@@ -40,7 +43,14 @@ export const TextArea = () => {
           }}
         />
 
-        {error ? <FormErrorMessage>{error}</FormErrorMessage> : null}
+        {error ? (
+          <FormErrorMessage display="flex" align="center" fontSize="0.85rem">
+            <Box mr="0.25rem" fontSize="1rem">
+              <AiFillWarning />
+            </Box>
+            {error}
+          </FormErrorMessage>
+        ) : null}
       </InputGroup>
     </FormControl>
   );

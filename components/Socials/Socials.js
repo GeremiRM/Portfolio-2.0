@@ -6,7 +6,7 @@ const Socials = () => {
     <Stack
       position="fixed"
       bottom="0"
-      left="2rem"
+      w={{ base: "100%", md: "calc(10vw + 3rem)" }}
       align="center"
       justify="center"
     >

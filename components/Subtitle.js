@@ -4,7 +4,7 @@ const Subtitle = ({ children, ...props }) => {
   return (
     <Heading
       fontFamily="Montserrat"
-      fontSize="3.5rem"
+      fontSize={{ base: "3.5rem", lg: "4.25rem" }}
       letterSpacing="5px"
       textShadow="-4px 3px 2px rgba(75,75,75, 1)"
       {...props}

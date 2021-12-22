@@ -54,7 +54,7 @@ export const ProjectImages = ({ project, slides }) => {
     >
       <Flex w="full" pos="relative" overflow="hidden">
         <Flex
-          maxH={{ base: "40vh", md: "50vh", xl: "60vh" }}
+          maxH={{ base: "40vh", md: "50vh" }}
           w="full"
           {...carouselStyle}
           align="center"

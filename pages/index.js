@@ -1,5 +1,3 @@
-import dynamic from "next/dynamic";
-
 import { Box } from "@chakra-ui/react";
 
 import Header from "../components/Header/Header";
@@ -10,10 +8,6 @@ import { Contact } from "../components/Contact/Contact";
 import { Skills } from "../components/Skills/Skills";
 
 import Projects from "../components/Projects/Projects";
-
-const DisplacementSphere = dynamic(() =>
-  import("../components/DisplacementSphere")
-);
 
 export default function Home() {
   return (

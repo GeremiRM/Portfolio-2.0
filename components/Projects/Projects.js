@@ -6,6 +6,8 @@ import { Slide } from "./Carousel/Slide";
 import { ProjectModal } from "./ProjectModal/ProjectModal";
 import { useGithubData } from "../hooks/useGithubData";
 import { Carousel } from "./Carousel/Carousel";
+import Typewriter from "../Typewriter";
+
 // import { test as Test } from "./ProjectModal/test";
 
 const Projects = () => {
@@ -38,7 +40,9 @@ const Projects = () => {
   return (
     <Box>
       <Container>
-        <Subtitle>Projects</Subtitle>
+        <Subtitle>
+          <Typewriter words={["Projects"]} />
+        </Subtitle>
         <Carousel gap={32}>{renderProjects()}</Carousel>
       </Container>
       <ProjectModal

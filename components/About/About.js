@@ -14,11 +14,9 @@ const About = () => {
         direction={{ base: "column", lg: "row" }}
         color="rgba(255, 255, 255, 0.75)"
       >
-        <Box mb="2rem">
+        <Box mb="2rem" flexBasis={{ lg: "600px" }} flex="1" mr="2rem">
           <Subtitle mb="2rem">
-            <Typewriter loop={1} speed={50} words={["Hi there"]} cursor="|">
-              Hi there
-            </Typewriter>
+            <Typewriter loop={1} speed={100} words={["Hi there"]} />
           </Subtitle>
 
           <Box lineHeight="160%">
@@ -38,7 +36,13 @@ const About = () => {
         </Box>
 
         {/* Image */}
-        <Box h="600px" bg="rgba(150, 150, 150, 0.25)" w="100%"></Box>
+        <Box
+          h="600px"
+          bg="rgba(150, 150, 150, 0.25)"
+          w="100%"
+          mt="2rem"
+          maxW={{ lg: "400px" }}
+        ></Box>
       </Flex>
     </Container>
   );

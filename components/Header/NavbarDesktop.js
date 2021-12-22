@@ -1,21 +1,23 @@
 import Link from "next/link";
 
-import { HStack, Text } from "@chakra-ui/react";
+import { Box, Text, Stack } from "@chakra-ui/react";
 
 const NavbarDesktop = () => {
   return (
-    <HStack as="nav" spacing="2rem" letterSpacing="2px">
+    <Stack as="nav" letterSpacing="2px" spacing="5rem">
       <Link href="#about">
         <Text
+          transform="rotate(90deg) translate(3rem, 150%)"
           cursor="pointer"
           transition="0.25s all ease"
           _hover={{ color: "#e7537b" }}
         >
-          About Me
+          About
         </Text>
       </Link>
       <Link href="#projects">
         <Text
+          transform="rotate(90deg) translate(3rem, 150%)"
           cursor="pointer"
           transition="0.25s all ease"
           _hover={{ color: "#e7537b" }}
@@ -25,6 +27,7 @@ const NavbarDesktop = () => {
       </Link>
       <Link href="#contact">
         <Text
+          transform="rotate(90deg) translate(3rem, 150%)"
           cursor="pointer"
           transition="0.25s all ease"
           _hover={{ color: "#e7537b" }}
@@ -32,7 +35,7 @@ const NavbarDesktop = () => {
           Contact
         </Text>
       </Link>
-    </HStack>
+    </Stack>
   );
 };
 

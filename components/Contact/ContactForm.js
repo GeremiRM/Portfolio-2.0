@@ -1,11 +1,15 @@
-import { Stack, Button, Box, useToast } from "@chakra-ui/react";
+import { Stack, Button, Box, useToast, Fade } from "@chakra-ui/react";
 import { Form, Formik } from "formik";
 
 import { InputField } from "./InputField";
 import { TextArea } from "./Textarea";
 import { send } from "emailjs-com";
 
+import { useInView } from "react-intersection-observer";
+
 export const ContactForm = ({}) => {
+  const { inView, ref } = useInView({ threshold: 0.25 });
+
   const toast = useToast();
 
   const validate = (values) => {
@@ -26,6 +30,7 @@ export const ContactForm = ({}) => {
       initialValues={{ from_name: "", from_email: "", message: "" }}
       onSubmit={async (values, actions) => {
         actions.setErrors(validate(values));
+        actions.setSubmitting(true);
 
         // If any field is empty, do nothing
         if (!from_name.value || !from_email.value || !message.value) return "";
@@ -61,7 +66,7 @@ export const ContactForm = ({}) => {
             toast({
               title: "Error!",
               description:
-                "An error occurred while sendind the email, try again",
+                "An error occurred while sending the email, try again",
               status: "error",
               duration: 4000,
               isClosable: true,
@@ -74,17 +79,15 @@ export const ContactForm = ({}) => {
       {({ isSubmitting }) => (
         <Form>
           <Stack spacing="4rem">
-            <InputField name="from_name" label="Name" />
+            <Fade in={inView} ref={ref}>
+              <InputField name="from_name" label="Name" />
+            </Fade>
 
             <InputField name="from_email" label="Email" type="email" />
 
             <TextArea />
 
-            <Box
-              alignSelf="flex-start"
-              pt={{ base: "4rem", sm: "2rem", md: "0" }}
-              w="100%"
-            >
+            <Box pt={{ base: "2rem", md: "0" }} w="100%">
               <Button
                 isLoading={isSubmitting}
                 type="submit"
