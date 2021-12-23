@@ -1,19 +1,15 @@
 import dynamic from "next/dynamic";
 
-import { useEffect } from "react";
-
 import Link from "next/link";
 
 import { Box, Heading, Flex, Stack } from "@chakra-ui/react";
 
-import styles from "../../styles/Home.module.scss";
 import { BiCaretDown } from "react-icons/bi";
 
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
-import Typewriter from "../Typewriter";
-import Title from "../Title";
+import { Typewriter } from "../Typewriter";
+import { Title } from "./Title";
 
 const DisplacementSphere = dynamic(() => import("./DisplacementSphere"));
 
@@ -30,7 +26,6 @@ export default function Hero() {
       <MotionBox>
         {/* Background Sphere */}
         <DisplacementSphere
-          className={styles.introBackground}
           theme={{
             rgbBackground: "25 25 25",
             themeId: "light",
@@ -49,7 +44,7 @@ export default function Hero() {
           <Heading
             color="rgba(255,255,255, 0.75)"
             fontFamily="Rajdhani"
-            fontSize="2.25rem"
+            fontSize={{ base: "1.5rem", md: "2.25rem" }}
             fontWeight="600"
             letterSpacing="3px"
             textShadow="-4px 3px 2px rgba(50,50,50, 1)"

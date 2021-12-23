@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { Flex, Box, Text, Stack } from "@chakra-ui/react";
 import NavbarMobile from "./NavbarMobile";
 import NavbarDesktop from "./NavbarDesktop";
@@ -16,7 +18,6 @@ const Header = () => {
       justify={{ base: "space-between", md: "flex-start" }}
       w={{ base: "100%", md: "10vw" }}
       align={{ base: "center", md: "flex-start" }}
-      // bg="#e7537b20"
     >
       <Text
         fontFamily="Montserrat"
@@ -24,9 +25,14 @@ const Header = () => {
         letterSpacing="-2px"
         fontWeight="900"
         fontSize="2.5rem"
-        color="#e7537a80"
+        color="#fc5d87"
+        transition="0.25s all ease"
+        _hover={{
+          color: "#e7537a",
+          transform: "scale(1.25)",
+        }}
       >
-        R
+        <Link href="#home">R</Link>
       </Text>
 
       <Box display={{ md: "none" }}>

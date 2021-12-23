@@ -61,6 +61,7 @@ export const PROJECTS_DATA = {
       the Shortener API to shorten any valid link given to the input, 
       saving the last 10 shortened links in the user's local storage. 
     `,
+    url: "https://shortener-com.vercel.app/",
     images: [
       `${IMAGES_DIR}/Shortener/1.png`,
       `${IMAGES_DIR}/Shortener/2.png`,

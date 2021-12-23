@@ -1,6 +1,6 @@
 import { Heading } from "@chakra-ui/react";
 
-const Title = ({ children, as, ...props }) => {
+export const Title = ({ children, as, ...props }) => {
   return (
     <Heading
       {...props}
@@ -9,7 +9,7 @@ const Title = ({ children, as, ...props }) => {
       textShadow="-4px 3px 2px rgba(75,75,75, 1)"
       as="h1"
       fontSize={{
-        base: "3.5rem",
+        base: "clamp(2.75rem, 10vw, 3.5rem)",
         md: "5rem",
         lg: "7rem",
         xl: "9rem",
@@ -19,5 +19,3 @@ const Title = ({ children, as, ...props }) => {
     </Heading>
   );
 };
-
-export default Title;

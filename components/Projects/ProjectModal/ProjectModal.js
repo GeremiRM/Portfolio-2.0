@@ -47,8 +47,7 @@ export const ProjectModal = ({ id, isOpen, onClose, project }) => {
       >
         <ModalOverlay />
         <ModalContent
-          bg="rgba(50,50,50,0.25)"
-          backdropFilter="blur(10px)"
+          bg="rgba(0,0,0,0.85)"
           color="white"
           py="2rem"
           maxW={{ md: "80vw", lg: "70rem" }}

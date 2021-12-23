@@ -72,6 +72,7 @@ export const ContactForm = ({}) => {
               isClosable: true,
             });
           });
+        actions.resetForm();
         actions.setSubmitting(false);
       }}
       validateOnChange={true}

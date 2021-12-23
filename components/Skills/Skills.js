@@ -1,4 +1,4 @@
-import { Box, Text, HStack, Divider, Tooltip } from "@chakra-ui/react";
+import { Box, HStack, Tooltip } from "@chakra-ui/react";
 
 import {
   SiHtml5,
@@ -11,18 +11,25 @@ import {
   SiSass,
 } from "react-icons/si";
 
-import Typewriter from "../Typewriter";
+import { Typewriter } from "../Typewriter";
 
-import Subtitle from "../Subtitle";
+import { Subtitle } from "../Subtitle";
 
-import Container from "../Container";
+import { Container } from "../Container";
 
 export const Skills = () => {
   return (
     <Container>
-      <Box color="white" textAlign="center" maxW="fit-content" mx="auto">
+      <Box
+        color="white"
+        textAlign="center"
+        maxW="fit-content"
+        mx="auto"
+        py="2.5rem"
+        pb="5rem"
+      >
         <Subtitle>
-          <Typewriter words={["Skills"]} />
+          <Typewriter words={["Skills"]} loop={1} />
         </Subtitle>
         <Box bg="rgba(50,50,50,0.75)" h="5px" rounded={5}></Box>
         <HStack

@@ -48,8 +48,8 @@ export const ProjectImages = ({ project, slides }) => {
       alignItems="center"
       justifyContent="center"
       mx="auto"
-      bg="rgba(50,50,50,0.25)"
-      backdropFilter="blur(10px)"
+      bg="rgb(20,20,20)"
+      // backdropFilter="blur(10px)"
       rounded={5}
     >
       <Flex w="full" pos="relative" overflow="hidden">

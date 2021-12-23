@@ -21,16 +21,16 @@ export default function Home() {
         <Hero />
       </Box>
 
-      <Box pt="20vh" id="about">
+      <Box id="about">
         <About />
       </Box>
-      <Box pt="5rem">
+      <Box>
         <Skills />
       </Box>
-      <Box pt="10rem" id="projects">
+      <Box id="projects">
         <Projects />
       </Box>
-      <Box id="contact" pt="10rem">
+      <Box id="contact">
         <Contact />
       </Box>
 
