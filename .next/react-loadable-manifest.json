@@ -77,14 +77,6 @@
       "file": "static/chunks/1.js"
     },
     {
-      "id": "./node_modules/next/dist/build/webpack/loaders/next-style-loader/runtime/injectStylesIntoStyleTag.js",
-      "file": "static/chunks/1.js"
-    },
-    {
-      "id": "./node_modules/next/dist/compiled/css-loader/api.js",
-      "file": "static/chunks/1.js"
-    },
-    {
       "id": "./node_modules/next/dist/compiled/css-loader/cjs.js?!./node_modules/next/dist/compiled/postcss-loader/cjs.js?!./node_modules/next/dist/compiled/resolve-url-loader/index.js?!./node_modules/next/dist/compiled/sass-loader/cjs.js?!./components/Hero/DisplacementSphere/DisplacementSphere.module.scss",
       "file": "static/chunks/1.js"
     },

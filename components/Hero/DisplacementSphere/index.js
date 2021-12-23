@@ -219,14 +219,14 @@ const DisplacementSphere = (props) => {
             `displacement-sphere--${status}`
           )}
           ref={canvasRef}
-          style={{
-            position: "absolute !important",
-            maxHeight: "120vh",
-            maxWidth: "100vw",
-            height: "100vw",
-            width: "100vw",
-            overflow: "hidden",
-          }}
+          // style={{
+          //   position: "absolute !important",
+          //   maxHeight: "120vh",
+          //   maxWidth: "100vw",
+          //   height: "100vw",
+          //   width: "100vw",
+          //   overflow: "hidden",
+          // }}
           {...props}
         />
       )}

@@ -11,6 +11,8 @@ import { motion } from "framer-motion";
 import { Typewriter } from "../Typewriter";
 import { Title } from "./Title";
 
+import styles from "./Hero.module.scss";
+
 const DisplacementSphere = dynamic(() => import("./DisplacementSphere"));
 
 export default function Hero() {
@@ -26,6 +28,7 @@ export default function Hero() {
       <MotionBox>
         {/* Background Sphere */}
         <DisplacementSphere
+          className={styles.introBackground}
           theme={{
             rgbBackground: "25 25 25",
             themeId: "light",
@@ -81,7 +84,7 @@ export default function Hero() {
             repeatType: "reverse",
             duration: "0.5",
           }}
-          position="absolute"
+          position="absolute "
           bottom="2rem"
           left="calc(50% - 1rem)"
           fontSize="3rem"
