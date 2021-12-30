@@ -1,98 +1,104 @@
 import { useState } from "react";
-import { Text, Box, Flex, Image, HStack } from "@chakra-ui/react";
+import {
+  Box,
+  IconButton,
+  useBreakpointValue,
+  Image,
+  AspectRatio,
+} from "@chakra-ui/react";
+// Here we have used react-icons package for the icons
+import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
+// And react-slick as our Carousel Lib
+import Slider from "react-slick";
 
-export const ProjectImages = ({ project, slides }) => {
-  const arrowStyles = {
-    cursor: "pointer",
-    pos: "absolute",
-    top: "50%",
-    w: "auto",
-    mt: "-22px",
-    p: "16px",
-    color: "#e7537b",
-    fontWeight: "bold",
-    fontSize: "18px",
-    transition: "0.6s ease",
-    borderRadius: "0 3px 3px 0",
-    userSelect: "none",
-    _hover: {
-      opacity: 0.8,
-      bg: "#e7537b",
-      color: "white",
-    },
-  };
+// Settings for the slider
+const settings = {
+  dots: true,
+  arrows: false,
+  fade: true,
+  infinite: true,
+  autoplay: true,
+  speed: 500,
+  autoplaySpeed: 5000,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  adaptiveHeight: true,
+};
 
-  const [currentSlide, setCurrentSlide] = useState(0);
+export const ProjectImages = ({ slides, video }) => {
+  // As we have used custom buttons, we need a reference variable to
+  // change the state
+  const [slider, setSlider] = useState(null);
 
-  const slidesCount = slides.length;
+  // These are the breakpoints which changes the position of the
+  // buttons as the screen size changes
+  const top = useBreakpointValue({ base: "90%", md: "50%" });
+  const side = useBreakpointValue({ base: "30%", md: "10px" });
 
-  const prevSlide = () => {
-    setCurrentSlide((s) => (s === 0 ? slidesCount - 1 : s - 1));
-  };
-  const nextSlide = () => {
-    setCurrentSlide((s) => (s === slidesCount - 1 ? 0 : s + 1));
-  };
-  const setSlide = (slide) => {
-    setCurrentSlide(slide);
-  };
-  const carouselStyle = {
-    transition: "all .5s",
-    ml: `-${currentSlide * 100}%`,
-  };
-
-  if (!slides) return <></>;
+  // These are the images used in the slide
+  const cards = [
+    "https://images.unsplash.com/photo-1612852098516-55d01c75769a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60",
+    "https://images.unsplash.com/photo-1627875764093-315831ac12f7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60",
+    "https://images.unsplash.com/photo-1571432248690-7fd6980a1ae2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60",
+  ];
 
   return (
-    <Flex
-      w="full"
-      alignItems="center"
-      justifyContent="center"
-      mx="auto"
-      bg="rgb(20,20,20)"
-      // backdropFilter="blur(10px)"
-      rounded={5}
-    >
-      <Flex w="full" pos="relative" overflow="hidden">
-        <Flex
-          maxH={{ base: "40vh", md: "50vh" }}
-          w="full"
-          {...carouselStyle}
-          align="center"
-        >
-          {slides.map((slide, sid) => (
-            <Image
-              src={slide}
-              key={`slide-${sid}`}
-              objectFit="contain"
-              boxSize="full"
-              shadow="md"
-              flex="none"
-            />
-          ))}
-        </Flex>
-        <Text {...arrowStyles} left="0" onClick={prevSlide}>
-          &#10094;
-        </Text>
-        <Text {...arrowStyles} right="0" onClick={nextSlide}>
-          &#10095;
-        </Text>
-        <HStack justify="center" pos="absolute" bottom="8px" w="full">
-          {slides.map((_, slide) => (
-            <Box
-              key={`dots-${slide}`}
-              cursor="pointer"
-              boxSize={["7px", , "15px"]}
-              m="0 2px"
-              bg={currentSlide === slide ? "#e7537b" : "#e7537b90"}
-              rounded="50%"
-              display="inline-block"
-              transition="background-color 0.6s ease"
-              _hover={{ bg: "#e7537b" }}
-              onClick={() => setSlide(slide)}
-            ></Box>
-          ))}
-        </HStack>
-      </Flex>
-    </Flex>
+    <Box position={"relative"} width={"full"} overflow={"hidden"}>
+      {/* CSS files for react-slick */}
+      <link
+        rel="stylesheet"
+        type="text/css"
+        charSet="UTF-8"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+      />
+      <link
+        rel="stylesheet"
+        type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+      />
+      {/* Left Icon */}
+      <IconButton
+        aria-label="left-arrow"
+        colorScheme="pink"
+        borderRadius="full"
+        position="absolute"
+        left={side}
+        top={top}
+        transform={"translate(0%, -50%)"}
+        zIndex={2}
+        onClick={() => slider?.slickPrev()}
+      >
+        <BiLeftArrowAlt />
+      </IconButton>
+      {/* Right Icon */}
+      <IconButton
+        aria-label="right-arrow"
+        colorScheme="pink"
+        borderRadius="full"
+        position="absolute"
+        right={side}
+        top={top}
+        transform={"translate(0%, -50%)"}
+        zIndex={2}
+        onClick={() => slider?.slickNext()}
+      >
+        <BiRightArrowAlt />
+      </IconButton>
+      {/* Slider */}
+      <Slider {...settings} ref={(slider) => setSlider(slider)}>
+        {slides.map((url, index) => {
+          // Is it an image?
+          return url.includes(".png") ? (
+            <Box boxSize="full" key={index} bg="#111" maxH="50vh">
+              <Image src={url} shadow="md" flex="none" mx="auto" />
+            </Box>
+          ) : (
+            <AspectRatio ration="1" zIndex="1" key={index}>
+              <iframe src={url} />
+            </AspectRatio>
+          );
+        })}
+      </Slider>
+    </Box>
   );
 };

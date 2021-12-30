@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react";
+import { Box, AspectRatio } from "@chakra-ui/react";
 
 import Header from "../components/Header/Header";
 import Hero from "../components/Hero/Hero";
@@ -20,6 +20,15 @@ export default function Home() {
       <Box id="home">
         <Hero />
       </Box>
+
+      <AspectRatio>
+        <iframe
+          src="https://www.youtube.com/embed/2p9YCeB9jhs"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+      </AspectRatio>
 
       <Box id="about">
         <About />

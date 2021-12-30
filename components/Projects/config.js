@@ -1,12 +1,18 @@
-import { SiTypescript, SiChakraui, SiNextdotjs, SiSass } from "react-icons/si";
+import {
+  SiTypescript,
+  SiChakraui,
+  SiNextdotjs,
+  SiSass,
+  SiJavascript,
+} from "react-icons/si";
 
 const GITHUB_URL = "https://api.github.com/repos";
 const USER = "geremirm";
 const PROJECTS = [
   "Spotify-Web-App",
+  "Portfolio-2.0",
   "Designo-Web-site",
   "Countries-Api",
-  "Shortener.com",
   "Shortener.com",
 ];
 
@@ -20,6 +26,7 @@ export const techIcons = {
   chakraui: <SiChakraui />,
   nextjs: <SiNextdotjs />,
   sass: <SiSass />,
+  javascript: <SiJavascript />,
 };
 
 const IMAGES_DIR = "/images/projects";
@@ -38,22 +45,31 @@ export const PROJECTS_DATA = {
       `${IMAGES_DIR}/Countries-Api/3.png`,
       `${IMAGES_DIR}/Countries-Api/4.png`,
     ],
-    url: "https://countries-api-taupe-one.vercel.app/",
+    url: "https://countries-api-five.vercel.app/",
     videos: ["video.mp4"],
     stack: ["typescript", "nextjs", "chakraui"],
   },
+
   "Designo-Web-site": {
     title: "Designo-Web-site",
-    desc: `A seven page website made with NextJS and ChakraUI`,
+    desc: `
+    A seven page static, completely responsive website made with 
+    NextJS and ChakraUI.  
+    `,
     images: [
       `${IMAGES_DIR}/Designo-Web-site/1.png`,
       `${IMAGES_DIR}/Designo-Web-site/2.png`,
       `${IMAGES_DIR}/Designo-Web-site/3.png`,
       `${IMAGES_DIR}/Designo-Web-site/4.png`,
+      `${IMAGES_DIR}/Designo-Web-site/5.png`,
+      `${IMAGES_DIR}/Designo-Web-site/6.png`,
+      `${IMAGES_DIR}/Designo-Web-site/7.png`,
     ],
+    url: "https://designo-web-site-seven.vercel.app/",
     videos: ["video.mp4"],
     stack: ["typescript", "nextjs", "chakraui"],
   },
+
   "Shortener.com": {
     title: "Shortener",
     desc: `A landing page for Shortify, a link shortener website.
@@ -61,7 +77,7 @@ export const PROJECTS_DATA = {
       the Shortener API to shorten any valid link given to the input, 
       saving the last 10 shortened links in the user's local storage. 
     `,
-    url: "https://shortener-com.vercel.app/",
+    url: "https://shortener-com-theta.vercel.app/",
     images: [
       `${IMAGES_DIR}/Shortener/1.png`,
       `${IMAGES_DIR}/Shortener/2.png`,
@@ -73,14 +89,45 @@ export const PROJECTS_DATA = {
     videos: ["video.mp4"],
     stack: ["typescript", "nextjs", "chakraui"],
   },
+
   "Spotify-Web-App": {
     title: "Spotify-Web-App",
-    stack: ["typescript", "nextjs", "chakraui", "sass"],
+    desc: `
+    A Spotify application made with Next.js and sass. Based on the
+    design of the Spotify's browser app, it allows the user to: Search,
+    save and play a track, album, artist or playlist. It also has an
+    integrated player and a lyrics feature.
+    `,
+    stack: ["typescript", "nextjs", "sass"],
+    video: "https://www.youtube.com/embed/2p9YCeB9jhs",
+    url: "https://spotify-q56hq53dk-ramosmg.vercel.app/login",
     images: [
       `${IMAGES_DIR}/Spotify-Web-App/1.png`,
       `${IMAGES_DIR}/Spotify-Web-App/2.png`,
       `${IMAGES_DIR}/Spotify-Web-App/3.png`,
       `${IMAGES_DIR}/Spotify-Web-App/4.png`,
+      `${IMAGES_DIR}/Spotify-Web-App/5.png`,
+      `${IMAGES_DIR}/Spotify-Web-App/6.png`,
+      `${IMAGES_DIR}/Spotify-Web-App/7.png`,
+      `${IMAGES_DIR}/Spotify-Web-App/8.png`,
+      `${IMAGES_DIR}/Spotify-Web-App/9.png`,
+      `${IMAGES_DIR}/Spotify-Web-App/10.png`,
+      `${IMAGES_DIR}/Spotify-Web-App/11.png`,
+      `${IMAGES_DIR}/Spotify-Web-App/12.png`,
     ],
+  },
+
+  "Portfolio-2.0": {
+    title: "Portfolio-2.0",
+    desc: `
+    This very website you're currently are on. Based on a design by Hamish
+    Williams, it was made with Next.js and ChakraUI, utilizing EmailJS for
+    the contact form, framer motion and Chakra for the animations, Typewriter
+    for the titles and subtitles, and finally three.js for the 3D model on the
+    Hero section. 
+    `,
+    stack: ["nextjs", "chakraui", "sass"],
+    url: "https://portfolio-2-0-black.vercel.app/",
+    images: [`${IMAGES_DIR}/Portfolio-2.0/1.png`],
   },
 };

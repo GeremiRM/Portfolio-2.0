@@ -63,7 +63,10 @@ export const ProjectModal = ({ id, isOpen, onClose, project }) => {
           </ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <ProjectImages project={data.title} slides={images} />
+            <ProjectImages
+              project={data.title}
+              slides={data.video ? [data.video, ...images] : images}
+            />
             <Box
               mt="2rem"
               w={{ base: "100%", md: "80%" }}
