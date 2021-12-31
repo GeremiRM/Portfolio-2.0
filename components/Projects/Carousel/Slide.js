@@ -70,7 +70,6 @@ export const Slide = ({
         <Text fontSize="1.5rem" fontWeight="700">
           {title}
         </Text>
-        <Text>{desc ?? "No description"}</Text>
         <HStack zIndex="1000" position="relative">
           <Link href={liveSite} target="_blank">
             <Button

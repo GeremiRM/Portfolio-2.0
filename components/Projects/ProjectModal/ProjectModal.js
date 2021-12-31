@@ -24,6 +24,7 @@ export const ProjectModal = ({ id, isOpen, onClose, project }) => {
     if (project) {
       setData(PROJECTS_DATA[project.name]);
       setImages(PROJECTS_DATA[project.name].images);
+      console.log(images);
     }
   }, [project]);
 

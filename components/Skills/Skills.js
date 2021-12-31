@@ -23,10 +23,9 @@ export const Skills = () => {
       <Box
         color="white"
         textAlign="center"
-        maxW="fit-content"
+        // maxW="fit-content"
         mx="auto"
-        py="2.5rem"
-        pb="5rem"
+        pt={{ lg: "15rem" }}
       >
         <Subtitle>
           <Typewriter words={["Skills"]} loop={1} />
@@ -35,12 +34,12 @@ export const Skills = () => {
         <HStack
           justify="center"
           fontSize="clamp(3rem, 5vw, 5rem)"
-          spacing="1.5rem"
+          spacing="2rem"
           flexWrap="wrap"
         >
           <Tooltip textTransform="uppercase" label="html">
             <Box
-              pt="1rem"
+              pt={{ base: "1rem", lg: "2rem" }}
               transition="0.25s all ease"
               _hover={{ color: "#e7537b" }}
             >
@@ -49,7 +48,7 @@ export const Skills = () => {
           </Tooltip>
           <Tooltip textTransform="uppercase" label="css">
             <Box
-              pt="1rem"
+              pt={{ base: "1rem", lg: "2rem" }}
               transition="0.25s all ease"
               _hover={{ color: "#e7537b" }}
             >
@@ -58,7 +57,7 @@ export const Skills = () => {
           </Tooltip>
           <Tooltip textTransform="uppercase" label="javascript">
             <Box
-              pt="1rem"
+              pt={{ base: "1rem", lg: "2rem" }}
               transition="0.25s all ease"
               _hover={{ color: "#e7537b" }}
             >
@@ -67,7 +66,7 @@ export const Skills = () => {
           </Tooltip>
           <Tooltip textTransform="uppercase" label="sass">
             <Box
-              pt="1rem"
+              pt={{ base: "1rem", lg: "2rem" }}
               transition="0.25s all ease"
               _hover={{ color: "#e7537b" }}
             >
@@ -76,7 +75,7 @@ export const Skills = () => {
           </Tooltip>
           <Tooltip textTransform="uppercase" label="react">
             <Box
-              pt="1rem"
+              pt={{ base: "1rem", lg: "2rem" }}
               transition="0.25s all ease"
               _hover={{ color: "#e7537b" }}
             >
@@ -85,7 +84,7 @@ export const Skills = () => {
           </Tooltip>
           <Tooltip textTransform="uppercase" label="nextjs">
             <Box
-              pt="1rem"
+              pt={{ base: "1rem", lg: "2rem" }}
               transition="0.25s all ease"
               _hover={{ color: "#e7537b" }}
             >
@@ -94,7 +93,7 @@ export const Skills = () => {
           </Tooltip>
           <Tooltip textTransform="uppercase" label="chakraui">
             <Box
-              pt="1rem"
+              pt={{ base: "1rem", lg: "2rem" }}
               transition="0.25s all ease"
               _hover={{ color: "#e7537b" }}
             >
@@ -103,7 +102,7 @@ export const Skills = () => {
           </Tooltip>
           <Tooltip textTransform="uppercase" label="typescript">
             <Box
-              pt="1rem"
+              pt={{ base: "1rem", lg: "2rem" }}
               transition="0.25s all ease"
               _hover={{ color: "#e7537b" }}
             >

@@ -11,6 +11,7 @@ const USER = "geremirm";
 const PROJECTS = [
   "Spotify-Web-App",
   "Portfolio-2.0",
+  "Nextjs-Contentful-Template",
   "Designo-Web-site",
   "Countries-Api",
   "Shortener.com",
@@ -99,7 +100,7 @@ export const PROJECTS_DATA = {
     integrated player and a lyrics feature.
     `,
     stack: ["typescript", "nextjs", "sass"],
-    video: "https://www.youtube.com/embed/2p9YCeB9jhs",
+    video: "https://www.youtube.com/embed/v5_NLfxUZ10",
     url: "https://spotify-q56hq53dk-ramosmg.vercel.app/login",
     images: [
       `${IMAGES_DIR}/Spotify-Web-App/1.png`,
@@ -126,8 +127,28 @@ export const PROJECTS_DATA = {
     for the titles and subtitles, and finally three.js for the 3D model on the
     Hero section. 
     `,
-    stack: ["nextjs", "chakraui", "sass"],
+    stack: ["nextjs", "chakraui", "sass", "javascript"],
     url: "https://portfolio-2-0-black.vercel.app/",
     images: [`${IMAGES_DIR}/Portfolio-2.0/1.png`],
+  },
+
+  "Nextjs-Contentful-Template": {
+    title: "Nextjs-Contentful-Template",
+    desc: `
+    A blog/news website that makes use of Next.js functionalities like
+    Static Generation (getStaticProps and getStaticPaths) and Incremental 
+    Static Regeneration (ISR) with data fetched from the Contentful Api. 
+    The specifications of the content models and fields in Contentful
+    can be found in the Github page. 
+    `,
+    stack: ["nextjs", "chakraui", "sass", "typescript"],
+    url: "https://mundana-blog-template.vercel.app/",
+    images: [
+      `${IMAGES_DIR}/Nextjs-Contentful-Template/1.png`,
+      `${IMAGES_DIR}/Nextjs-Contentful-Template/2.png`,
+      `${IMAGES_DIR}/Nextjs-Contentful-Template/3.png`,
+      `${IMAGES_DIR}/Nextjs-Contentful-Template/4.png`,
+      `${IMAGES_DIR}/Nextjs-Contentful-Template/5.png`,
+    ],
   },
 };
