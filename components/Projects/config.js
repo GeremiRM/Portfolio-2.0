@@ -101,7 +101,7 @@ export const PROJECTS_DATA = {
     `,
     stack: ["typescript", "nextjs", "sass"],
     video: "https://www.youtube.com/embed/v5_NLfxUZ10",
-    url: "https://spotify-q56hq53dk-ramosmg.vercel.app/login",
+    url: "https://spotify-73p3zbhm8-ramosmg.vercel.app/login",
     images: [
       `${IMAGES_DIR}/Spotify-Web-App/1.png`,
       `${IMAGES_DIR}/Spotify-Web-App/2.png`,
@@ -128,7 +128,7 @@ export const PROJECTS_DATA = {
     Hero section. 
     `,
     stack: ["nextjs", "chakraui", "sass", "javascript"],
-    url: "https://portfolio-2-0-black.vercel.app/",
+    url: "https://portfolio-2-0-flax.vercel.app/",
     images: [`${IMAGES_DIR}/Portfolio-2.0/1.png`],
   },
 
