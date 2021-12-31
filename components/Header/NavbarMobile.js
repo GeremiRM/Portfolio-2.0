@@ -134,7 +134,23 @@ const NavbarMobile = () => {
               </ChakraLink>
             </HStack>
             <Box>
-              <Button>Resume</Button>
+              <a
+                href="/documents/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  bg="transparent"
+                  border="2px solid #e7537b"
+                  color="white"
+                  transition="0.25s"
+                  _hover={{
+                    bg: "#e7537b",
+                  }}
+                >
+                  Resume
+                </Button>
+              </a>
             </Box>
           </DrawerFooter>
         </DrawerContent>
