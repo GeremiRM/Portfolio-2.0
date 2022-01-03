@@ -101,7 +101,7 @@ export const PROJECTS_DATA = {
     `,
     stack: ["typescript", "nextjs", "sass"],
     video: "https://www.youtube.com/embed/v5_NLfxUZ10",
-    url: "https://spotify-73p3zbhm8-ramosmg.vercel.app/login",
+    url: "https://spotify-web-app-lqauqs0g2-g-ramos.vercel.app/login",
     images: [
       `${IMAGES_DIR}/Spotify-Web-App/1.png`,
       `${IMAGES_DIR}/Spotify-Web-App/2.png`,
