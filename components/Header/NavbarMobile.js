@@ -119,6 +119,7 @@ const NavbarMobile = () => {
                   bg="transparent"
                   fontSize="1.75rem"
                   icon={<FaGithub />}
+                  _hover={{ backgroundColor: "#e7537b" }}
                 />
               </ChakraLink>
               <ChakraLink
@@ -130,6 +131,7 @@ const NavbarMobile = () => {
                   bg="transparent"
                   fontSize="1.75rem"
                   icon={<FaLinkedin />}
+                  _hover={{ backgroundColor: "#e7537b" }}
                 />
               </ChakraLink>
             </HStack>

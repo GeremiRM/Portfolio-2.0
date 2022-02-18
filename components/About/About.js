@@ -34,11 +34,12 @@ const About = () => {
             <SlideFade in={inView}>
               <Box lineHeight="180%">
                 <Text mb="2rem">
-                  I am a motivated <b>front-end developer</b> specialized in
-                  various technologies such as Javascript, Typescript, React,
-                  Next.js, ChakraUI and SASS. Well-organised, problem solver,
-                  independent and creative with high attention to detail and a
-                  host of projects that demonstrate just that.{" "}
+                  I am a motivated <b>software developer</b> specialized in{" "}
+                  <b>front-end development</b>, utilizing various technologies
+                  such as JavaScript, Typescript, React, Next.js, ChakraUI and
+                  SASS. Well-organized, problem solver, independent and creative
+                  with high attention to detail and a host of projects that
+                  demonstrate just that.
                   <Text color="#e7537b">
                     <Link href="#contact">
                       Hit me up and let's work on something special.
